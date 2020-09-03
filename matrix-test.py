@@ -8,5 +8,5 @@ Mt = M.transpose()
 
 P = Mt.dot(M)
 
-print("Max value in product is {}", np.amax(P))
-print("Location of max value in product is {}", np.argmax(P))
+print(f"Max value in product is {np.amax(P)}")
+print(f"Location of max value in product is {np.argmax(P)}")
