@@ -67,4 +67,12 @@ Submit the job setting the environment variable `MODULE` to the desired module n
 
     sbatch --export=MODULE=R/3.6.2-foss-2019b ./matrix-test-R.sh
 
+# Other Information
 
+## AVX/OpenBLAS Bug 2168
+
+[Bug 2168](https://github.com/xianyi/OpenBLAS/issues/2168) indicates issues with OpenBLAS and the AVX-512 instruction set.  A test case was given that uses a small snippet that returns unpredictable results in some cases on hosts with AVX-512 features on the CPU.
+
+This does not seem to be the case here.  First, this happens on non-AVX512 hosts (the F class hosts). I have also run this code on AVX-512 and non-AVX-512 hosts and gotten consistent answers.
+
+The [script](https://github.com/xianyi/OpenBLAS/issues/2168#issuecomment-512959445) `rgb-lab-convert.R` contains this test case.
