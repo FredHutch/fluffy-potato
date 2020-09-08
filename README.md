@@ -13,7 +13,7 @@ Generate a transpose of this matrix and multiply (dot-product) M x Mt.  Return t
 
 The product of this operation should result in the largest value in the last cell of the matrix.  The value should be 814054500000.
 
-In our environment, using R version 3.6.2 built against the EasyBuild foss-2016b toolchain returns unpredictable and changing values when the matrix is above a dimention between 200 and 250.  The returned largest value changes with most every execution as does the cell where that largest value is found. For example, these were run as jobs on multiple different nodes:
+In our environment, using R version 3.6.2 built against the EasyBuild foss-2018b toolchain returns unpredictable and changing values when the matrix is above a dimention between 200 and 250.  The returned largest value changes with most every execution as does the cell where that largest value is found. For example, these were run as jobs on multiple different nodes:
 
 ```
 [1] 966440835000
